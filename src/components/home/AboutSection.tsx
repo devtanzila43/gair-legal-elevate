@@ -1,33 +1,49 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import teamImage from "@/assets/team-meeting.jpg";
+
 export function AboutSection() {
   return (
     <section className="section-padding">
-      <div className="container-narrow">
-        <div className="text-center">
-          <p className="text-accent text-sm uppercase tracking-widest mb-3">
-            Welcome to Gair Legal
-          </p>
-          <h2 className="text-foreground mb-6">
-            A Culture of Innovation and Excellence
-          </h2>
-          <div className="divider-subtle mb-8" />
-          <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
-            <p>
-              <span className="text-foreground font-medium">Gair Legal</span> was established in 2011 
-              and has quickly become one of Australia's premier law firms. We are a progressive and 
-              highly specialised firm providing strategic and proactive dispute resolutions for 
-              insurers and employers.
+      <div className="container-wide">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Content */}
+          <div>
+            <p className="text-gold text-sm uppercase tracking-widest mb-3 font-medium">
+              About Gair Legal
             </p>
-            <p>
-              Gair Legal acts on behalf of and in partnership with icare, general insurers, corporate 
-              and government self-insurers, and small and large corporations. Our reputation for 
-              exceptional service has resulted in the firm being nominated by major organisations 
-              as the preferred law firm to handle their claims.
+            <h2 className="text-foreground mb-6">
+              Established 2011.<br />
+              Progressive. Highly Specialised.
+            </h2>
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              Gair Legal has established itself as the law firm of choice for insurers, 
+              employers, scheme agents, self-insurers and corporations seeking superior 
+              legal representation across Australia.
             </p>
-            <p>
-              The firm is founded on outstanding legal knowledge and experience with core values of 
-              <span className="text-accent font-medium"> quality, integrity, loyalty, accountability</span> and 
-              dedication to a superior legal service.
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Our culture of innovation and excellence, combined with a values-based 
+              approach centered on integrity, loyalty, and dedication, ensures we 
+              consistently exceed client expectations.
             </p>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 text-gold font-medium hover:gap-3 transition-all duration-200"
+            >
+              Learn more about us
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Image */}
+          <div className="relative">
+            <img
+              src={teamImage}
+              alt="Gair Legal team in discussion"
+              className="rounded-sm shadow-luxury w-full"
+            />
+            {/* Decorative gold accent */}
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-gold rounded-sm -z-10" />
           </div>
         </div>
       </div>

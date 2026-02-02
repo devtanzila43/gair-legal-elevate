@@ -73,7 +73,7 @@ export function Header() {
 
       {/* Main Navigation */}
       <nav
-        className={`transition-all duration-base ${
+        className={`transition-all duration-200 ${
           isScrolled
             ? "bg-background/95 backdrop-blur-md shadow-soft"
             : "bg-background"
@@ -81,12 +81,12 @@ export function Header() {
       >
         <div className="container-wide">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+            {/* Logo - High resolution, matching header exactly */}
             <Link to="/" className="flex-shrink-0">
               <img
                 src={logo}
                 alt="Gair Legal - Legal Provider for Insurers & Employers"
-                className="h-12 md:h-14 w-auto"
+                className="h-14 w-auto"
               />
             </Link>
 
@@ -96,15 +96,15 @@ export function Header() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-4 py-2 text-sm font-medium transition-colors duration-fast relative group ${
+                  className={`px-4 py-2 text-sm font-medium transition-colors duration-200 relative group ${
                     location.pathname === item.href
-                      ? "text-accent"
-                      : "text-foreground hover:text-accent"
+                      ? "text-gold"
+                      : "text-foreground hover:text-gold"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute bottom-0 left-4 right-4 h-0.5 bg-accent transition-transform duration-base origin-left ${
+                    className={`absolute bottom-0 left-4 right-4 h-0.5 bg-gold transition-transform duration-200 origin-left ${
                       location.pathname === item.href
                         ? "scale-x-100"
                         : "scale-x-0 group-hover:scale-x-100"
@@ -116,7 +116,7 @@ export function Header() {
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button asChild variant="default" className="bg-navy hover:bg-navy/90">
+              <Button asChild variant="gold">
                 <Link to="/contact">Speak to Us</Link>
               </Button>
             </div>
@@ -146,7 +146,7 @@ export function Header() {
                   to={item.href}
                   className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${
                     location.pathname === item.href
-                      ? "text-accent bg-sky"
+                      ? "text-gold bg-gold/5"
                       : "text-foreground hover:bg-muted"
                   }`}
                 >
@@ -154,7 +154,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-4 px-4">
-                <Button asChild className="w-full bg-navy hover:bg-navy/90">
+                <Button asChild variant="gold" className="w-full">
                   <Link to="/contact">Speak to Us</Link>
                 </Button>
               </div>

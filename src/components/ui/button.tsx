@@ -11,17 +11,18 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        outline: "border border-input bg-background hover:bg-muted hover:text-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Luxury variants for Gair Legal
-        hero: "bg-white text-[hsl(212,70%,20%)] hover:bg-white/90 shadow-elevated font-semibold",
-        "hero-outline": "border-2 border-white text-white hover:bg-white hover:text-[hsl(212,70%,20%)] font-semibold",
-        navy: "bg-[hsl(212,70%,20%)] text-white hover:bg-[hsl(212,70%,20%)]/90 shadow-soft",
-        "navy-outline": "border border-[hsl(212,70%,20%)] text-[hsl(212,70%,20%)] hover:bg-[hsl(212,70%,20%)] hover:text-white",
-        accent: "bg-[hsl(210,67%,37%)] text-white hover:bg-[hsl(210,67%,37%)]/90",
-        subtle: "bg-[hsl(210,58%,95%)] text-[hsl(212,70%,20%)] hover:bg-[hsl(210,58%,95%)]/80",
+        // Premium Executive variants for Gair Legal
+        gold: "bg-gold text-white hover:scale-105 shadow-soft font-semibold",
+        "gold-outline": "border-2 border-gold text-gold hover:bg-gold hover:text-white font-semibold",
+        hero: "bg-gold text-white hover:scale-105 shadow-elevated font-semibold",
+        "hero-outline": "border-2 border-white text-white hover:bg-white hover:text-navy font-semibold",
+        navy: "bg-navy text-white hover:bg-navy/90 shadow-soft",
+        "navy-outline": "border border-navy text-navy hover:bg-navy hover:text-white",
+        subtle: "bg-muted text-navy hover:bg-muted/80",
       },
       size: {
         default: "h-10 px-5 py-2",
