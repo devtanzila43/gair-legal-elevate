@@ -2,95 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Gair Legal Design System
+   Luxury minimal law firm aesthetic - refined blues, generous whitespace, confident typography
+   All colors in HSL format
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap');
 
 @layer base {
   :root {
+    /* Core Brand Colors */
+    --ink: 213 50% 11%;           /* #0e1a2b - Deep ink for text */
+    --navy: 212 70% 20%;          /* #0f2e55 - Primary navy */
+    --blue: 210 67% 37%;          /* #1f5e9d - Accent blue */
+    --sky: 210 58% 95%;           /* #e8f1fb - Light blue tint */
+    --sand: 40 20% 96%;           /* #f7f6f3 - Warm neutral */
+    --accent: 210 100% 73%;       /* #7fb7ff - Highlight accent */
+    --gold: 38 72% 50%;           /* #d4a02c - Logo gold accent */
+    
+    /* Semantic Tokens */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 213 50% 11%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 213 50% 11%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --popover-foreground: 213 50% 11%;
+    
+    --primary: 212 70% 20%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 40 20% 96%;
+    --secondary-foreground: 213 50% 11%;
+    
+    --muted: 210 58% 95%;
+    --muted-foreground: 213 30% 40%;
+    
+    --accent: 210 67% 37%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 67% 37%;
+    
+    --radius: 0.25rem;
+    
+    /* Sidebar */
+    --sidebar-background: 212 70% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 210 67% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 212 70% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 212 70% 30%;
+    --sidebar-ring: 210 100% 73%;
+    
+    /* Custom Properties */
+    --header-height: 80px;
+    --office-bar-height: 36px;
+    --transition-fast: 200ms;
+    --transition-base: 250ms;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --background: 213 50% 8%;
+    --foreground: 210 20% 95%;
+    
+    --card: 213 50% 11%;
+    --card-foreground: 210 20% 95%;
+    
+    --popover: 213 50% 11%;
+    --popover-foreground: 210 20% 95%;
+    
+    --primary: 210 67% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 213 40% 15%;
+    --secondary-foreground: 210 20% 95%;
+    
+    --muted: 213 40% 18%;
+    --muted-foreground: 210 20% 65%;
+    
+    --accent: 210 67% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    --border: 213 40% 20%;
+    --input: 213 40% 20%;
+    --ring: 210 67% 50%;
+    
+    --sidebar-background: 213 50% 8%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 210 67% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 213 40% 15%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 213 40% 20%;
+    --sidebar-ring: 210 67% 50%;
   }
 }
 
@@ -98,8 +109,156 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
-  body {
-    @apply bg-background text-foreground;
+  
+  html {
+    scroll-behavior: smooth;
   }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  /* Refined heading scales */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  /* Serif accent for quotes */
+  .font-serif {
+    font-family: 'Newsreader', Georgia, serif;
+  }
+}
+
+@layer components {
+  /* Container with consistent max-width */
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-6 md:px-8;
+  }
+  
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 md:px-8;
+  }
+  
+  /* Luxury gradient overlays */
+  .gradient-overlay {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--navy) / 0.85) 0%,
+      hsl(var(--navy) / 0.7) 50%,
+      hsl(var(--blue) / 0.6) 100%
+    );
+  }
+  
+  .gradient-overlay-dark {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--ink) / 0.7) 0%,
+      hsl(var(--navy) / 0.9) 100%
+    );
+  }
+  
+  /* Subtle divider line */
+  .divider-subtle {
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--border)) 20%,
+      hsl(var(--border)) 80%,
+      transparent 100%
+    );
+  }
+  
+  /* Section padding standard */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .section-padding-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+  
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Card hover states */
+  .card-hover {
+    @apply transition-all duration-[250ms] ease-out;
+  }
+  
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 20px 40px -15px hsl(var(--navy) / 0.15);
+  }
+  
+  /* Button luxury variant base */
+  .btn-luxury {
+    @apply relative overflow-hidden transition-all duration-[250ms] ease-out;
+  }
+  
+  .btn-luxury::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-[250ms];
+    background: linear-gradient(135deg, transparent 0%, hsl(0 0% 100% / 0.1) 100%);
+  }
+  
+  .btn-luxury:hover::after {
+    @apply opacity-100;
+  }
+  
+  /* Focus states for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn var(--transition-base) ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp var(--transition-base) ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  /* Stagger delays for lists */
+  .stagger-1 { animation-delay: 50ms; }
+  .stagger-2 { animation-delay: 100ms; }
+  .stagger-3 { animation-delay: 150ms; }
+  .stagger-4 { animation-delay: 200ms; }
+  .stagger-5 { animation-delay: 250ms; }
+  .stagger-6 { animation-delay: 300ms; }
 }
