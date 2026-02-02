@@ -60,7 +60,7 @@ export function Footer() {
             <img
               src={logo}
               alt="Gair Legal"
-              className="h-12 w-auto brightness-0 invert mb-6"
+              className="h-14 w-auto mb-6"
             />
             <p className="text-sm text-primary-foreground/70 leading-relaxed mb-6">
               Progressive, highly specialised Australian firm serving insurers, 
@@ -73,7 +73,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-gold font-sans">
               Quick Links
             </h4>
             <ul className="space-y-2.5">
@@ -81,7 +81,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-fast"
+                    className="text-sm text-primary-foreground/70 hover:text-gold transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -92,7 +92,7 @@ export function Footer() {
 
           {/* Practice Areas */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-gold font-sans">
               Expertise
             </h4>
             <ul className="space-y-2.5">
@@ -100,7 +100,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-fast"
+                    className="text-sm text-primary-foreground/70 hover:text-gold transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -111,7 +111,7 @@ export function Footer() {
 
           {/* Offices */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-gold font-sans">
               Our Offices
             </h4>
             <ul className="space-y-4">
@@ -122,7 +122,7 @@ export function Footer() {
                   </p>
                   <a
                     href={`tel:${office.phone.replace(/\s/g, "")}`}
-                    className="flex items-center gap-1.5 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="flex items-center gap-1.5 text-primary-foreground/70 hover:text-gold transition-colors"
                   >
                     <Phone className="w-3 h-3" />
                     {office.phone}
@@ -132,7 +132,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/locations"
-                  className="text-sm text-accent hover:underline"
+                  className="text-sm text-gold hover:underline"
                 >
                   View all locations →
                 </Link>
@@ -141,6 +141,9 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Gold accent line */}
+      <div className="h-px bg-gold/30" />
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
@@ -152,10 +155,10 @@ export function Footer() {
               Liability limited by a scheme approved under Professional Standards Legislation.
             </p>
             <div className="flex items-center gap-6">
-              <Link to="/privacy" className="hover:text-primary-foreground transition-colors">
+              <Link to="/privacy" className="hover:text-gold transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-primary-foreground transition-colors">
+              <Link to="/terms" className="hover:text-gold transition-colors">
                 Terms of Use
               </Link>
             </div>

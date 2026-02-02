@@ -14,13 +14,14 @@ export default {
     },
     extend: {
       colors: {
-        // Core brand colors
+        // Core brand colors - Premium Executive Palette
         ink: "hsl(var(--ink))",
         navy: "hsl(var(--navy))",
+        gold: "hsl(var(--gold))",
+        light: "hsl(var(--light))",
         blue: "hsl(var(--blue))",
         sky: "hsl(var(--sky))",
         sand: "hsl(var(--sand))",
-        gold: "hsl(var(--gold))",
         
         // Semantic tokens
         border: "hsl(var(--border))",
@@ -69,7 +70,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Newsreader', 'Georgia', 'serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        display: ['Playfair Display', 'Georgia', 'serif'],
       },
       fontSize: {
         'display': ['4rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
@@ -84,6 +86,7 @@ export default {
         'soft': '0 2px 8px -2px hsl(var(--navy) / 0.08)',
         'elevated': '0 8px 30px -10px hsl(var(--navy) / 0.12)',
         'luxury': '0 20px 50px -20px hsl(var(--navy) / 0.2)',
+        'card': '0 4px 20px -4px hsl(var(--navy) / 0.1)',
       },
       transitionDuration: {
         'fast': '200ms',

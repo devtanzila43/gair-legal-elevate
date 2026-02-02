@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
   return (
-    <section className="section-padding bg-gradient-to-br from-navy via-navy to-blue relative overflow-hidden">
-      {/* Decorative elements */}
+    <section className="section-padding bg-navy relative overflow-hidden">
+      {/* Decorative gold accent elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-        <div className="absolute top-10 right-10 w-64 h-64 border border-primary-foreground rounded-full" />
-        <div className="absolute top-32 right-32 w-96 h-96 border border-primary-foreground rounded-full" />
+        <div className="absolute top-10 right-10 w-64 h-64 border border-gold rounded-full" />
+        <div className="absolute top-32 right-32 w-96 h-96 border border-gold rounded-full" />
       </div>
 
       <div className="container-narrow relative z-10">
         <div className="text-center">
-          <p className="text-accent text-sm uppercase tracking-widest mb-4">
+          <p className="text-gold text-sm uppercase tracking-widest mb-4 font-medium">
             Ready to Get Started?
           </p>
           <h2 className="text-primary-foreground mb-6">
@@ -24,7 +24,7 @@ export function CTASection() {
             superior representation and exceptional client service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild variant="hero" size="xl">
+            <Button asChild variant="gold" size="xl">
               <Link to="/contact">
                 Contact Us Today
                 <ArrowRight className="w-5 h-5" />

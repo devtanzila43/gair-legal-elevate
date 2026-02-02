@@ -2,44 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Gair Legal Design System
-   Luxury minimal law firm aesthetic - refined blues, generous whitespace, confident typography
+/* Gair Legal Premium Executive Design System
+   Luxury law firm aesthetic - deep navy, gold accents, refined typography
    All colors in HSL format
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --ink: 213 50% 11%;           /* #0e1a2b - Deep ink for text */
-    --navy: 212 70% 20%;          /* #0f2e55 - Primary navy */
-    --blue: 210 67% 37%;          /* #1f5e9d - Accent blue */
-    --sky: 210 58% 95%;           /* #e8f1fb - Light blue tint */
-    --sand: 40 20% 96%;           /* #f7f6f3 - Warm neutral */
-    --accent: 210 100% 73%;       /* #7fb7ff - Highlight accent */
-    --gold: 38 72% 50%;           /* #d4a02c - Logo gold accent */
+    /* Core Brand Colors - Premium Executive Palette */
+    --ink: 213 53% 11%;               /* #0A192F - Deep executive navy */
+    --navy: 213 53% 11%;              /* #0A192F - Primary brand color */
+    --gold: 41 51% 56%;               /* #C5A059 - Luxury gold accent */
+    --light: 210 20% 98%;             /* #F8F9FA - Clean light background */
+    --sand: 40 20% 96%;               /* #f7f6f3 - Warm neutral */
+    --blue: 213 53% 20%;              /* Muted blue for depth */
+    --sky: 210 40% 96%;               /* Light tint */
     
     /* Semantic Tokens */
     --background: 0 0% 100%;
-    --foreground: 213 50% 11%;
+    --foreground: 213 53% 11%;
     
     --card: 0 0% 100%;
-    --card-foreground: 213 50% 11%;
+    --card-foreground: 213 53% 11%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 213 50% 11%;
+    --popover-foreground: 213 53% 11%;
     
-    --primary: 212 70% 20%;
+    --primary: 213 53% 11%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 40 20% 96%;
-    --secondary-foreground: 213 50% 11%;
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 213 53% 11%;
     
-    --muted: 210 58% 95%;
+    --muted: 210 20% 96%;
     --muted-foreground: 213 30% 40%;
     
-    --accent: 210 67% 37%;
+    --accent: 41 51% 56%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
@@ -47,19 +47,19 @@
     
     --border: 210 20% 90%;
     --input: 210 20% 90%;
-    --ring: 210 67% 37%;
+    --ring: 41 51% 56%;
     
     --radius: 0.25rem;
     
     /* Sidebar */
-    --sidebar-background: 212 70% 20%;
+    --sidebar-background: 213 53% 11%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 210 67% 37%;
+    --sidebar-primary: 41 51% 56%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 212 70% 25%;
+    --sidebar-accent: 213 53% 15%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 212 70% 30%;
-    --sidebar-ring: 210 100% 73%;
+    --sidebar-border: 213 53% 20%;
+    --sidebar-ring: 41 51% 56%;
     
     /* Custom Properties */
     --header-height: 80px;
@@ -69,16 +69,16 @@
   }
 
   .dark {
-    --background: 213 50% 8%;
+    --background: 213 53% 6%;
     --foreground: 210 20% 95%;
     
-    --card: 213 50% 11%;
+    --card: 213 53% 10%;
     --card-foreground: 210 20% 95%;
     
-    --popover: 213 50% 11%;
+    --popover: 213 53% 10%;
     --popover-foreground: 210 20% 95%;
     
-    --primary: 210 67% 50%;
+    --primary: 41 51% 56%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 213 40% 15%;
@@ -87,21 +87,21 @@
     --muted: 213 40% 18%;
     --muted-foreground: 210 20% 65%;
     
-    --accent: 210 67% 45%;
+    --accent: 41 51% 60%;
     --accent-foreground: 0 0% 100%;
     
     --border: 213 40% 20%;
     --input: 213 40% 20%;
-    --ring: 210 67% 50%;
+    --ring: 41 51% 56%;
     
-    --sidebar-background: 213 50% 8%;
+    --sidebar-background: 213 53% 6%;
     --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 210 67% 50%;
+    --sidebar-primary: 41 51% 56%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 213 40% 15%;
+    --sidebar-accent: 213 40% 12%;
     --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 213 40% 20%;
-    --sidebar-ring: 210 67% 50%;
+    --sidebar-border: 213 40% 18%;
+    --sidebar-ring: 41 51% 56%;
   }
 }
 
@@ -115,13 +115,14 @@
   }
   
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
   }
   
+  /* Playfair Display for all headings - sophisticated legal look */
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
     @apply font-semibold tracking-tight;
-    font-family: 'Inter', system-ui, sans-serif;
   }
   
   /* Refined heading scales */
@@ -137,9 +138,9 @@
     @apply text-xl md:text-2xl;
   }
   
-  /* Serif accent for quotes */
-  .font-serif {
-    font-family: 'Newsreader', Georgia, serif;
+  /* Inter for body text */
+  p, span, a, li, label, input, textarea, button {
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
@@ -153,21 +154,21 @@
     @apply max-w-7xl mx-auto px-6 md:px-8;
   }
   
-  /* Luxury gradient overlays */
+  /* Premium gradient overlays */
   .gradient-overlay {
     background: linear-gradient(
       135deg,
-      hsl(var(--navy) / 0.85) 0%,
-      hsl(var(--navy) / 0.7) 50%,
-      hsl(var(--blue) / 0.6) 100%
+      hsl(var(--navy) / 0.9) 0%,
+      hsl(var(--navy) / 0.85) 50%,
+      hsl(var(--navy) / 0.8) 100%
     );
   }
   
   .gradient-overlay-dark {
     background: linear-gradient(
       180deg,
-      hsl(var(--ink) / 0.7) 0%,
-      hsl(var(--navy) / 0.9) 100%
+      hsl(var(--ink) / 0.85) 0%,
+      hsl(var(--navy) / 0.95) 100%
     );
   }
   
@@ -195,6 +196,19 @@
   /* Text utilities */
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Premium card with gold border-top */
+  .card-premium {
+    @apply bg-card rounded-sm overflow-hidden;
+    border-top: 2px solid hsl(var(--gold));
+    box-shadow: 0 4px 20px -4px hsl(var(--navy) / 0.1);
+    transition: all 250ms ease-out;
+  }
+  
+  .card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px hsl(var(--navy) / 0.15);
   }
   
   /* Card hover states */
@@ -226,7 +240,23 @@
   
   /* Focus states for accessibility */
   .focus-ring {
-    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold;
+  }
+  
+  /* Gold accent text */
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  
+  /* Page header styling */
+  .page-header {
+    @apply relative py-20 md:py-28 bg-navy overflow-hidden;
+  }
+  
+  .page-header::before {
+    content: '';
+    @apply absolute inset-0 opacity-10;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C5A059' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 }
 
